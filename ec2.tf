@@ -4,7 +4,7 @@ resource "aws_instance" "r100c96" {
   availability_zone = "ap-south-1b"
   key_name      = "aws-exam-testing"
   user_data = file("installcommand.sh")
-  count = 0
+  count = 5
   tags = {
     Name  = "Terraform-diff-linux-${count.index}"
   }
